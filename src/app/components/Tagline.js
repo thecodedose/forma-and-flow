@@ -12,12 +12,13 @@ export default function Tagline() {
   return (
     <div
       ref={containerRef}
-      className='w-screen h-[300vh] bg-white rounded-3xl py-[25vh] relative'
+      className='w-screen h-[300vh] bg-gradient-to-b from-stone-950 to-stone-800 rounded-3xl relative py-[25vh]'
     >
+
       <div className='w-screen h-screen sticky top-0 flex justify-center items-center'>
         <motion.h2
           style={{ scale: scale }}
-          className='text-8xl font-bold text-black flex flex-col absolute'
+          className='text-8xl font-bold text-stone-400 flex flex-col absolute'
         >
           <span className='uppercase'>Shaping</span>
           <span className='uppercase'>design,</span>

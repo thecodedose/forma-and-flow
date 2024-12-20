@@ -12,7 +12,7 @@ const projects = [
     color: "#C2491D",
   },
   {
-    color: "#B62429",
+    color: "#B62429 ",
   },
   {
     color: "#88A28D",
@@ -64,10 +64,7 @@ export default function Products() {
     offset: ["start start", "end end"],
   })
   return (
-    <div
-      ref={containerRef}
-      className={`w-screen relative bg-white rounded-xl`}
-    >
+    <div ref={containerRef} className={`w-screen relative bg-white rounded-xl`}>
       <div className='flex h-screen justify-center sticky top-0'>
         {"Products".split("").map((char, index) => (
           <div
@@ -76,7 +73,7 @@ export default function Products() {
           >
             <motion.span
               key={index}
-              initial={{ transform: "translateY(100%)" }}
+              initial={{ transform: "translateY(50%)" }}
               whileInView={{ transform: "translateY(0%)" }}
               transition={{
                 duration: 1,

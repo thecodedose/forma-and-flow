@@ -1,12 +1,12 @@
 "use client"
 import { useRef, useEffect } from "react"
 import Header from "./components/Header"
-import Hero from "./components/Hero"
+import Hero from "./components/Hero/Hero"
 import Products from "./components/Products"
 import Services from "./components/Services"
 import Tagline from "./components/Tagline"
 import Lenis from "@studio-freight/lenis"
-import Footer from './components/Footer'
+import Footer from "./components/Footer"
 
 export default function Home() {
   const lenisRef = useRef(null)
