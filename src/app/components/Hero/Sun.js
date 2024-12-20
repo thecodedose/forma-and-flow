@@ -46,7 +46,8 @@ export default function Sun() {
 
   return (
     <motion.div
-      initial={{ transform: "translate(-50%, -25%)" }}
+      initial={{ x: "-50%", y: "-25%" }}
+      animate={{ y: "-50%" }}
       transition={{ type: "spring", ease: "easeOut" }}
       ref={sunElementRef}
       className='w-52 h-52 overflow-hidden rounded-full absolute top-[30vh] left-1/2 bg-gradient-to-b from-stone-900 to-stone-400'

@@ -1,7 +1,7 @@
 "use client"
 import { useRef, useEffect } from "react"
 import Header from "./components/Header"
-import Hero from "./components/Hero/Hero"
+import Hero from "./components/Hero"
 import Products from "./components/Products"
 import Services from "./components/Services"
 import Tagline from "./components/Tagline"

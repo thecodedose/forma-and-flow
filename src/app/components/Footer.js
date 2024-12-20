@@ -10,13 +10,12 @@ export default function Footer() {
   return (
     <div className='w-screen h-screen flex flex-col justify-center items-center p-20'>
       <span className='text-8xl font-bold uppercase'>Forma & Flow</span>
-      <span className='text-2xl'>Stay connected!</span>
       <div className='flex justify-center'>
         <button
           onClick={openModal}
-          className='bg-white text-black rounded-lg px-10 py-3 my-3'
+          className='bg-white text-black text-xl rounded-lg px-10 py-3 my-3'
         >
-          Signup for our newsletter!
+          Stay connected!
         </button>
 
         <TallyModal isOpen={isModalOpen} onClose={closeModal} />

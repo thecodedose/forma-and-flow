@@ -7,6 +7,11 @@ import Sun from "./Sun"
 export default function Hero() {
   return (
     <div className='h-screen w-screen bg-[#eaeaea] sticky top-0 -z-10'>
+      <h4
+        className={`text-xl text-stone-800 font-bold uppercase text-center py-3`}
+      >
+        Forma & Flow
+      </h4>
       <Clouds />
       <Sun />
       <Mountains />
