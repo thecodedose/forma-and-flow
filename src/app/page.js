@@ -34,7 +34,6 @@ export default function Home() {
   return (
     <div ref={lenisRef}>
       <div>
-        <Header />
         <Hero />
         <Tagline />
       </div>

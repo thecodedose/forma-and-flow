@@ -19,7 +19,7 @@ export default function Tagline() {
   return (
     <div
       ref={containerRef}
-      className='w-screen h-[300vh] bg-gradient-to-b from-stone-950 to-stone-800 rounded-3xl relative py-[25vh]'
+      className='w-screen h-[300vh] bg-gradient-to-b from-stone-800 to-stone-700 relative py-[25vh]'
     >
       <div className='w-screen h-screen sticky top-0 flex justify-center items-center'>
         <motion.h2

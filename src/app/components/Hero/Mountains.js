@@ -10,7 +10,7 @@ export default function Mountains() {
         style={{
           clipPath: "polygon(0% 0%, 100% 100%, 0% 100%)",
         }}
-        className='w-[20vw] h-[50vh] absolute top-1/4 left-0 bg-white'
+        className='w-[20vw] h-[50vh] absolute top-[30vh] left-0 bg-white'
       ></motion.div>
       <motion.div
         initial={{ transform: "translate(0, 0)", opacity: 0 }}
@@ -19,7 +19,7 @@ export default function Mountains() {
         style={{
           clipPath: "polygon(100% 0%, 100% 100%, 0% 100%)",
         }}
-        className='w-[20vw] h-[50vh] absolute top-1/4 right-0 bg-white'
+        className='w-[20vw] h-[50vh] absolute top-[30vh] right-0 bg-white'
       ></motion.div>
     </>
   )

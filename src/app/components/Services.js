@@ -36,7 +36,7 @@ export default function Services() {
   )
 
   return (
-    <div className='bg-stone-800 w-screen h-[400vh]' ref={containerRef}>
+    <div className='bg-stone-700 w-screen h-[400vh]' ref={containerRef}>
       <div className='sticky top-0'>
         <div className='flex justify-center items-center pt-20'>
           {"Services".split("").map((char, index) => (
