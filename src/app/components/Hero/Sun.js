@@ -50,7 +50,7 @@ export default function Sun() {
       animate={{ y: "-50%" }}
       transition={{ type: "spring", ease: "easeOut" }}
       ref={sunElementRef}
-      className='w-52 h-52 overflow-hidden rounded-full absolute top-[30vh] left-1/2 bg-gradient-to-b from-stone-900 to-stone-400'
+      className='w-52 h-52 overflow-hidden rounded-full absolute top-[30vh] left-1/2 bg-gradient-to-br from-black via-stone-800 to-stone-500'
     >
       <Image
         src='/noise.png'

@@ -5,7 +5,7 @@ export default function Waves() {
   const generateWaves = () => {
     const waves = []
     let top = 2
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 6; i++) {
       waves.push(
         <motion.div
           key={i}
@@ -33,7 +33,7 @@ export default function Waves() {
       initial={{ transform: "translateY(100px)" }}
       animate={{ transform: "translateY(0px)" }}
       transition={{ type: "spring", ease: "easeOut", delay: 0.2 }}
-      className='flex justify-center items-center h-[150vh] bg-stone-900 border-t-2 border-white w-screen absolute top-[50vh]'
+      className='flex justify-center items-center h-[100vh] bg-stone-950 border-t-2 border-white w-screen absolute top-[50vh]'
     >
       <div
         width={100}

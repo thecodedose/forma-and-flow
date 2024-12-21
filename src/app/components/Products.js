@@ -3,19 +3,21 @@ import { motion, useScroll, useTransform } from "framer-motion"
 
 const projects = [
   {
+    title: "Portfolio Template",
+    description:
+      "Lorem dorem ipsum sit dolor. Lorem dorem ipsum sit dolor.Lorem dorem ipsum sit dolor.",
     color: "#BBACAF",
+    img: "https://thecodedose.com/assets/confident-ritchie-123a6d.netlify_2.png",
   },
   {
+    title: "Portfolio Template",
     color: "#977F6D",
+    img: "https://thecodedose.com/assets/confident-ritchie-123a6d.netlify_2.png",
   },
   {
+    title: "Portfolio Template",
     color: "#C2491D",
-  },
-  {
-    color: "#B62429 ",
-  },
-  {
-    color: "#88A28D",
+    img: "https://thecodedose.com/assets/confident-ritchie-123a6d.netlify_2.png",
   },
 ]
 
@@ -23,7 +25,7 @@ const Card = ({
   i,
   title,
   description,
-  src,
+  img,
   url,
   color,
   progress,
@@ -45,13 +47,29 @@ const Card = ({
       className='w-screen h-screen flex justify-center items-center sticky top-0'
     >
       <motion.div
-        className='relative h-1/2 w-1/2'
+        className='relative h-2/3 w-full border border-stone-900'
         style={{
-          backgroundColor: color,
+          backgroundColor: "white",
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          top: `calc(5vh + ${i * 30}px)`,
         }}
-      ></motion.div>
+      >
+        <div className='grid grid-cols-3 h-full'>
+          <div className='flex flex-col justify-between text-stone-900 h-full'>
+            <h2 className='p-10 uppercase text-8xl'>{title}</h2>
+            <div className='w-full px-10 py-3 bg-stone-900'>
+              <a className='uppercase text-xl text-stone-200'>Explore</a>
+            </div>
+          </div>
+          <div
+            style={{ backgroundImage: `url(${img})` }}
+            className='h-full border-l border-r border-stone-900'
+          ></div>
+          <div className='p-10 text-stone-900 font-bodoni'>
+            <p>{description}</p>
+          </div>
+        </div>
+      </motion.div>
     </div>
   )
 }
@@ -64,12 +82,15 @@ export default function Products() {
     offset: ["start start", "end end"],
   })
   return (
-    <div ref={containerRef} className={`w-screen relative bg-white rounded-xl`}>
-      <div className='flex h-screen justify-center sticky top-0'>
+    <div
+      ref={containerRef}
+      className={`w-screen relative bg-stone-100 rounded-t-3xl py-20`}
+    >
+      <div className='flex h-screen justify-center sticky top-0 font-bodoni'>
         {"Products".split("").map((char, index) => (
           <div
             key={index}
-            className='text-[150px] text-black font-bold flex flex-col uppercase overflow-hidden'
+            className='text-[150px] text-stone-700 italic font-bold flex flex-col uppercase overflow-hidden'
           >
             <motion.span
               key={index}

@@ -6,34 +6,55 @@ import Sun from "./Sun"
 
 export default function Hero() {
   return (
-    <div className='h-[200vh] w-screen bg-[#eaeaea] relative'>
-      <div className='sticky top-0'>
+    <div className='h-[150vh] w-screen bg-[#eaeaea] relative'>
+      <div className='sticky top-0 grid grid-cols-3 py-3'>
+        <div>
+          <span
+            className={`text-xl text-stone-800 font-bold uppercase text-center pl-10`}
+          >
+            2020
+          </span>
+        </div>
         <h4
-          className={`text-xl text-stone-800 font-bold uppercase text-center py-3`}
+          className={`text-xl text-stone-800 font-bold uppercase text-center`}
         >
           Forma & Flow
         </h4>
+        <div className='underline flex justify-around text-lg text-stone-800 font-bold uppercase'>
+          <a className='text-center'>Services</a>
+          <a className='text-center'>Products</a>
+          <a className='text-center'>Contact</a>
+        </div>
         <Clouds />
         <Sun />
         <Mountains />
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className='absolute left-20 top-20 w-[30vw] z-10 text-stone-900 font-bodoni'
+      >
+        <p className='font-thin italic z-10 text-2xl leading-6'>
+          Our mission is to design with purpose, ensuring every creation
+          balances form and flow to inspire, engage, and deliver meaningful
+          experiences.
+        </p>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className='w-[30vw] flex flex-col items-end absolute right-0 top-[25vh] z-10 text-stone-900 text-right'
+      >
+        <p className='font-bold uppercase pr-2'>
+          To inspire and innovate through designs that effortlessly blend
+          structure and movement, shaping brands and experiences that endure
+        </p>
+        <h4 className='uppercase font-bold text-[200px] leading-tight'>
+          Design
+        </h4>
+      </motion.div>
       <Waves />
-      {/* <p className='text-center w-1/2'>
-          Forma & Flow was born out of the belief that great design is a
-          delicate dance between structure and creativity. We build digital
-          experiences that are not just visually stunning but also intuitive and
-          impactful. Our team thrives on turning complex ideas into designs that
-          tell your story effortlessly.
-        </p> */}
-      {/* <div className='flex flex-col items-center w-screen absolute bottom-10'>
-        <span className='uppercase'>Scroll</span>
-        <motion.div
-          initial={{ height: "0px" }}
-          animate={{ height: "20px" }}
-          transition={{ type: "spring" }}
-          className='w-[1px] h-8 bg-white'
-        ></motion.div>
-      </div> */}
     </div>
   )
 }

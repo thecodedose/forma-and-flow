@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Bubbles from "./Bubbles"
 
 export default function Tagline() {
   const containerRef = useRef(null)
@@ -19,12 +20,18 @@ export default function Tagline() {
   return (
     <div
       ref={containerRef}
-      className='w-screen h-[300vh] bg-gradient-to-b from-stone-800 to-stone-700 relative py-[25vh]'
+      className='w-screen h-[300vh] bg-stone-950 relative py-[25vh]'
     >
+      <div
+        width={100}
+        height={100}
+        className='absolute top-0 w-full h-full bg-[url("/noise.png")] opacity-40'
+      ></div>
+      <Bubbles />
       <div className='w-screen h-screen sticky top-0 flex justify-center items-center'>
         <motion.h2
           style={{ scale: scale }}
-          className='text-8xl font-bold text-stone-400 flex flex-col absolute'
+          className='text-8xl  text-stone-200 flex flex-col absolute'
         >
           {["Shaping", "design,", "building", "experiences"].map(
             (word, index) => {
@@ -37,7 +44,7 @@ export default function Tagline() {
                 >
                   <span className='uppercase'>{word}</span>
                   <div
-                    className={`h-[1px] ${width[index]} bg-stone-400 -translate-y-3 transition-all`}
+                    className={`h-[1px] ${width[index]} bg-stone-200 -translate-y-3 transition-all`}
                   ></div>
                 </div>
               )

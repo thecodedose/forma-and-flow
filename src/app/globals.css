@@ -5,7 +5,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bodoni-font: "Bodoni Moda", serif;
   box-sizing: border-box;
+}
+
+.font-bodoni {
+  font-family: var(--bodoni-font);
 }
 
 @media (prefers-color-scheme: dark) {
