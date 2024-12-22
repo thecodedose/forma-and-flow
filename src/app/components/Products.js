@@ -47,25 +47,25 @@ const Card = ({
       className='w-screen h-screen flex justify-center items-center sticky top-0'
     >
       <motion.div
-        className='relative h-2/3 w-full border border-stone-900'
+        className='relative h-2/3 w-full rounded-xl'
         style={{
           backgroundColor: "white",
           scale,
           top: `calc(5vh + ${i * 30}px)`,
         }}
       >
-        <div className='grid grid-cols-3 h-full'>
-          <div className='flex flex-col justify-between text-stone-900 h-full'>
+        <div className='grid grid-cols-3 h-full shadow-lg'>
+          <div className='flex flex-col justify-between text-stone-900 bg-stone-100 shadow-lg rounded-l-lg h-full'>
             <h2 className='p-10 uppercase text-8xl'>{title}</h2>
-            <div className='w-full px-10 py-3 bg-stone-900'>
+            <div className='w-full px-10 py-3 bg-stone-900 rounded-bl-xl'>
               <a className='uppercase text-xl text-stone-200'>Explore</a>
             </div>
           </div>
           <div
             style={{ backgroundImage: `url(${img})` }}
-            className='h-full border-l border-r border-stone-900'
+            className='h-full'
           ></div>
-          <div className='p-10 text-stone-900 font-bodoni'>
+          <div className='p-10 rounded-r-xl bg-stone-100 text-stone-900 uppercase font-bold'>
             <p>{description}</p>
           </div>
         </div>
@@ -84,13 +84,18 @@ export default function Products() {
   return (
     <div
       ref={containerRef}
-      className={`w-screen relative bg-stone-100 rounded-t-3xl py-20`}
+      className={`w-screen relative rounded-t-3xl py-20`}
+      style={{
+        background: "url('/noise.png'), linear-gradient(#f5f5f4, #9fb1ad)",
+        backgroundRepeat: "round",
+        backgroundBlendMode: "multiply",
+      }}
     >
-      <div className='flex h-screen justify-center sticky top-0 font-bodoni'>
+      <div className='flex h-screen justify-center sticky top-0'>
         {"Products".split("").map((char, index) => (
           <div
             key={index}
-            className='text-[150px] text-stone-700 italic font-bold flex flex-col uppercase overflow-hidden'
+            className='text-[150px] text-stone-800 font-bold flex flex-col uppercase overflow-hidden'
           >
             <motion.span
               key={index}

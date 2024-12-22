@@ -33,12 +33,12 @@ export default function Waves() {
       initial={{ transform: "translateY(100px)" }}
       animate={{ transform: "translateY(0px)" }}
       transition={{ type: "spring", ease: "easeOut", delay: 0.2 }}
-      className='flex justify-center items-center h-[100vh] bg-stone-950 border-t-2 border-white w-screen absolute top-[50vh]'
+      className='flex justify-center items-center h-[100vh] bg-gradient-to-b from-[#000b1e] via-[#21466b] to-[#385f70] border-t-2 border-white w-screen absolute top-[50vh]'
     >
       <div
         width={100}
         height={100}
-        className='w-full h-full bg-[url("/noise.png")] opacity-40'
+        className='w-full h-full bg-[url("/noise.png")] opacity-20 bg-repeat-round'
       ></div>
       {generateWaves()}
     </motion.div>

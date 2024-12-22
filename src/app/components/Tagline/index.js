@@ -22,12 +22,12 @@ export default function Tagline() {
   return (
     <div
       ref={containerRef}
-      className='w-screen h-[300vh] bg-stone-950 relative py-[25vh]'
+      className='w-screen h-[300vh] bg-gradient-to-b from-[#385f70] via-[#1f2d57] to-[#000b1e] relative py-[25vh]'
     >
       <div
         width={100}
         height={100}
-        className='absolute top-0 w-full h-full bg-[url("/noise.png")] opacity-40'
+        className='absolute top-0 w-full h-full bg-[url("/noise.png")] opacity-20'
       ></div>
       <Bubbles />
       <div className='w-screen h-screen sticky top-0 flex justify-center items-center'>

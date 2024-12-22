@@ -50,15 +50,14 @@ export default function Sun() {
       animate={{ y: "-50%" }}
       transition={{ type: "spring", ease: "easeOut" }}
       ref={sunElementRef}
-      className='w-52 h-52 overflow-hidden rounded-full absolute top-[30vh] left-1/2 bg-gradient-to-br from-black via-stone-800 to-stone-500'
+      className='w-52 h-52 overflow-hidden rounded-full absolute top-[30vh] left-1/2'
+      style={{ background: "radial-gradient(circle, #ff87a0, #fff2bb)" }}
     >
-      <Image
-        src='/noise.png'
+      <div
         width={100}
         height={100}
-        alt=''
-        className='w-full h-full opacity-60'
-      />
+        className='w-full h-full bg-[url("/noise.png")] opacity-80 bg-repeat-round'
+      ></div>
     </motion.div>
   )
 }

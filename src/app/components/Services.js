@@ -40,17 +40,15 @@ export default function Services() {
   )
 
   return (
-    <div className='bg-stone-950  w-screen h-[400vh]' ref={containerRef}>
+    <div className='bg-[#000b1e]  w-screen h-[400vh]' ref={containerRef}>
       <div
         width={100}
         height={100}
-        className='absolute w-full h-[400vh] bg-[url("/noise.png")] opacity-40'
+        className='absolute w-full h-[400vh] bg-[url("/noise.png")] bg-repeat-round opacity-20'
       ></div>
       <div className='sticky top-0'>
         <div className='px-20 py-10'>
-          <h4 className='uppercase text-8xl font-thin font-bodoni italic'>
-            Services
-          </h4>
+          <h4 className='uppercase text-8xl font-bold'>Services</h4>
           <p className='w-1/2'>
             Forma & Flow was born out of the belief that great design is a
             delicate dance between structure and creativity. We build digital
@@ -68,17 +66,18 @@ export default function Services() {
             {SERVICES.map(({ title, link, p1, p2, img }, index) => (
               <div
                 key={index}
-                className='w-screen h-[50vh] grid grid-cols-2 p-20 gap-20'
+                className='w-screen grid grid-cols-2 p-20 gap-20'
               >
                 <div className='w-full relative'>
                   <span className='text-[150px]  text-stone-400 font-bodoni italic absolute right-0 -translate-y-1/2'>{`0${
                     index + 1
                   }`}</span>
                   <img
-                    className='w-3/4 rounded-full'
+                    className='h-full'
                     src={img}
                     width={500}
                     height={100}
+                    alt=''
                   ></img>
                 </div>
                 <div className='flex flex-col gap-5'>

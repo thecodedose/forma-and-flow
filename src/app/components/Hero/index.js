@@ -4,12 +4,13 @@ import Clouds from "./Clouds"
 import Mountains from "./Mountains"
 import Sun from "./Sun"
 import Underline from "../Text/Underline"
+import Typing from "../Text/Typing"
 
 export default function Hero() {
   return (
-    <div className='h-[150vh] w-screen bg-[#eaeaea] relative'>
+    <div className='h-[150vh] w-screen relative'>
       <div className='sticky top-0 grid grid-cols-3 py-3'>
-        <div>
+        <div className='z-10'>
           <span
             className={`text-xl text-stone-800 uppercase text-center pl-10`}
           >
@@ -17,11 +18,11 @@ export default function Hero() {
           </span>
         </div>
         <h4
-          className={`text-xl text-stone-800 font-bold uppercase text-center`}
+          className={`text-stone-800 text-2xl font-bold uppercase text-center z-10`}
         >
           Forma & Flow
         </h4>
-        <div className='flex justify-around text-lg text-stone-800 font-bold uppercase'>
+        <div className='flex justify-between pr-10 items-center text-lg text-stone-800 font-bold uppercase z-10'>
           <a className='text-center cursor-pointer'>
             <Underline text='Services'></Underline>
           </a>
@@ -32,6 +33,18 @@ export default function Hero() {
             <Underline text='Contact'></Underline>
           </a>
         </div>
+        <div
+          className='absolute top-0 w-screen h-[50vh]'
+          style={{
+            background: "linear-gradient(#bff1ff, #eefffe, #ffe7ea, #c0cad6)",
+          }}
+        >
+          <div
+            width={100}
+            height={100}
+            className='w-full h-full bg-[url("/noise.png")] opacity-30 bg-repeat-round'
+          ></div>
+        </div>
         <Clouds />
         <Sun />
         <Mountains />
@@ -41,23 +54,27 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className='absolute left-20 top-20 w-[30vw] z-10 text-stone-900 font-bodoni'
+          className='absolute left-20 top-20 w-[30vw] z-10 text-stone-900'
         >
-          <p className='font-thin italic z-10 text-2xl leading-6'>
-            Our mission is to design with purpose, ensuring every creation
+          <div className='font-bold uppercase z-10 leading-6'>
+            <Typing
+              text='Our mission is to design with purpose, ensuring every creation
             balances form and flow to inspire, engage, and deliver meaningful
-            experiences.
-          </p>
+            experiences.'
+            />
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className='w-[30vw] flex flex-col items-end absolute right-0 top-[20vh] text-stone-900 text-right'
+          className='w-[30vw] flex flex-col items-start absolute right-0 top-[20vh] text-stone-900'
         >
-          <p className='font-bold uppercase pr-2'>
-            To inspire and innovate through designs that effortlessly blend
-            structure and movement, shaping brands and experiences that endure
-          </p>
+          <div className='font-bold uppercase pr-2 h-12'>
+            <Typing
+              text='To inspire and innovate through designs that effortlessly blend
+            structure and movement, shaping brands and experiences that endure'
+            />
+          </div>
           <h4 className='uppercase font-bold text-[200px] leading-tight'>
             Design
           </h4>

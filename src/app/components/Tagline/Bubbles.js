@@ -16,13 +16,16 @@ function Bubble({ width, height, top, left, bottom, right }) {
         repeatType: "reverse",
         duration: 2,
       }}
-      className={`${width} ${height} ${top} ${bottom} ${left} ${right} overflow-hidden rounded-full absolute bg-gradient-to-br from-black via-stone-800 to-stone-500`}
+      style={{
+        background: "radial-gradient(circle, #385f70, #21466b,#000b1e )",
+      }}
+      className={`${width} ${height} ${top} ${bottom} ${left} ${right} overflow-hidden rounded-full absolute opacity-70`}
     >
       <div
         width={100}
         height={100}
         alt=''
-        className='w-full h-full bg-[url("/noise.png")] bg-opacity-10'
+        className='w-full h-full bg-[url("/noise.png")] opacity-20 bg-repeat-round'
       />
     </motion.div>
   )
@@ -33,7 +36,12 @@ export default function Bubbles() {
     { width: "w-[15vw]", height: "h-[15vw]", top: "top-1/4", left: "left-32" },
     { width: "w-[25vw]", height: "h-[25vw]", top: "top-1/8", left: "left-1/2" },
     { width: "w-[30vw]", height: "h-[30vw]", top: "top-2/3", left: "left-16" },
-    { width: "w-[35vw]", height: "h-[35vw]", top: "top-1/3", left: "right-[8vw]" },
+    {
+      width: "w-[35vw]",
+      height: "h-[35vw]",
+      top: "top-1/3",
+      left: "right-[8vw]",
+    },
   ]
 
   const generateBubbles = () => {
