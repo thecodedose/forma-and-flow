@@ -13,24 +13,10 @@ export default function Mountains() {
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%)" }}
         ></div>
         <div
-          initial={{ y: "10%" }}
-          whileInView={{ y: "0" }}
-          transition={{
-            type: "spring",
-            ease: "easeInOut",
-            duration: 1,
-          }}
           className='bg-stone-500 w-1/4 h-[40vh]'
           style={{ clipPath: "polygon(100% 0%, 100% 100%, 0% 100%)" }}
         ></div>
         <div
-          initial={{ y: "10%" }}
-          whileInView={{ y: "0" }}
-          transition={{
-            type: "spring",
-            ease: "easeInOut",
-            duration: 1,
-          }}
           className='bg-gradient-to-b from-stone-800 to-stone-500 w-1/4 h-[40vh]'
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%)" }}
         ></div>

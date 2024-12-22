@@ -75,7 +75,7 @@ export default function Services() {
                     index + 1
                   }`}</span>
                   <img
-                    className='w-full'
+                    className='w-3/4 rounded-full'
                     src={img}
                     width={500}
                     height={100}
