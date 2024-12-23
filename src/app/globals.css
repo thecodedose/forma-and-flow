@@ -7,6 +7,7 @@
   --foreground: #171717;
   --bodoni-font: "Bodoni Moda", serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .font-bodoni {
@@ -24,8 +25,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--my-font);
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 /* For modern browsers */

@@ -1,8 +1,6 @@
-import { motion, useAnimationFrame } from "framer-motion"
-import Image from "next/image"
-import { useState, useEffect, useRef } from "react"
+import { motion } from "framer-motion"
 
-function Bubble({ width, height, top, left, bottom, right }) {
+function Bubble({ width, height, top, left, bottom, right, scale }) {
   return (
     <motion.div
       initial={{ x: "0", y: "0" }}
@@ -18,6 +16,7 @@ function Bubble({ width, height, top, left, bottom, right }) {
       }}
       style={{
         background: "radial-gradient(circle, #385f70, #21466b,#000b1e )",
+        scale: scale,
       }}
       className={`${width} ${height} ${top} ${bottom} ${left} ${right} overflow-hidden rounded-full absolute opacity-70`}
     >
@@ -31,7 +30,7 @@ function Bubble({ width, height, top, left, bottom, right }) {
   )
 }
 
-export default function Bubbles() {
+export default function Bubbles({ scale }) {
   const bubbles = [
     { width: "w-[15vw]", height: "h-[15vw]", top: "top-1/4", left: "left-32" },
     { width: "w-[25vw]", height: "h-[25vw]", top: "top-1/8", left: "left-1/2" },
@@ -45,11 +44,9 @@ export default function Bubbles() {
   ]
 
   const generateBubbles = () => {
-    return bubbles.map((bubble, index) => <Bubble {...bubble} key={index} />)
+    return bubbles.map((bubble, index) => (
+      <Bubble {...bubble} key={index} scale={scale} />
+    ))
   }
-  return (
-    <div className='top-0 w-full h-screen sticky top-0'>
-      {generateBubbles()}
-    </div>
-  )
+  return <div className='top-0 w-full h-screen sticky'>{generateBubbles()}</div>
 }

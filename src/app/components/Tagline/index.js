@@ -1,24 +1,17 @@
-import { useRef, useState, useEffect } from "react"
+import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Bubbles from "./Bubbles"
-import Underline from "../Text/Underline"
 import Flip from "../Text/Flip"
 
 export default function Tagline() {
   const containerRef = useRef(null)
-  const [width, setWidth] = useState(["w-0", "w-0", "w-0", "w-0"])
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
   })
 
-  const updateWidth = (index, value) => {
-    const newWidths = ["w-0", "w-0", "w-0", "w-0"]
-    newWidths[index] = value
-    setWidth(newWidths)
-  }
-
   const scale = useTransform(scrollYProgress, [0, 1], [1, 2])
+  const scaleBubble = useTransform(scrollYProgress, [0, 1], [0.5, 1])
   return (
     <div
       ref={containerRef}
@@ -29,7 +22,7 @@ export default function Tagline() {
         height={100}
         className='absolute top-0 w-full h-full bg-[url("/noise.png")] opacity-20'
       ></div>
-      <Bubbles />
+      <Bubbles scale={scaleBubble} />
       <div className='w-screen h-screen sticky top-0 flex justify-center items-center'>
         <motion.h2
           style={{ scale: scale }}
@@ -37,7 +30,14 @@ export default function Tagline() {
         >
           {["Shaping", "design,", "building", "experiences"].map(
             (word, index) => {
-              return <Flip key={index} text1={word} text2={word} lineHeight={"h-[6rem]"} />
+              return (
+                <Flip
+                  key={index}
+                  text1={word}
+                  text2={word}
+                  lineHeight={"h-[6rem]"}
+                />
+              )
             }
           )}
         </motion.h2>

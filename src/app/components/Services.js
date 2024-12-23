@@ -13,7 +13,7 @@ const SERVICES = [
   {
     title: "Brand Identity",
     p1: "Your brand is more than just a logo—it's the story, personality, and promise that defines how your audience perceives you. We specialize in building cohesive and impactful brand identities that reflect your core values and resonate with your target audience.",
-    p2: "From designing timeless logos and selecting signature color palettes to crafting messaging that communicates your brand's essence, we ensure consistency across every touchpoint. Whether you’re starting from scratch or reimagining an existing brand, our process dives deep into understanding your vision, creating an identity that not only stands out but also leaves a lasting impression in the minds of your customers.",
+    p2: "From designing timeless logos and selecting signature color palettes to crafting messaging that communicates your brand's essence, we ensure consistency across every touchpoint.",
     link: "https://tally.so/r/mYVJXq",
     img: "https://thecodedose.com/assets/confident-ritchie-123a6d.netlify_2.png",
   },
@@ -40,7 +40,11 @@ export default function Services() {
   )
 
   return (
-    <div className='bg-[#000b1e]  w-screen h-[400vh]' ref={containerRef}>
+    <div
+      className='bg-[#000b1e]  w-screen h-[400vh]'
+      ref={containerRef}
+      id='services'
+    >
       <div
         width={100}
         height={100}
@@ -61,34 +65,38 @@ export default function Services() {
         <div className='w-screen overflow-hidden'>
           <motion.div
             style={{ x }}
-            className='w-[300vw] h-screen flex sticky top-1/3'
+            className='w-[300vw] h-screen flex gap-20 px-20 sticky top-1/3'
           >
             {SERVICES.map(({ title, link, p1, p2, img }, index) => (
-              <div
-                key={index}
-                className='w-screen grid grid-cols-2 p-20 gap-20'
-              >
-                <div className='w-full relative'>
-                  <span className='text-[150px]  text-stone-400 font-bodoni italic absolute right-0 -translate-y-1/2'>{`0${
-                    index + 1
-                  }`}</span>
-                  <img
-                    className='h-full'
-                    src={img}
-                    width={500}
-                    height={100}
-                    alt=''
-                  ></img>
-                </div>
-                <div className='flex flex-col gap-5'>
-                  <div className='border-b border-stone-200'>
-                    <h3 className='text-8xl uppercase font-thin'>{title}</h3>
+              <div key={index} className='w-screen h-fit flex justify-center'>
+                <div
+                  className='w-[70vw] bg-blend-overlay rounded-3xl h-[65vh] grid grid-cols-[1fr,2fr] items-center p-20 gap-20'
+                  style={{
+                    background:
+                      "url('/noise.png'), linear-gradient(45deg, #000b1e, #c0baa4)",
+                  }}
+                >
+                  <div className='w-full relative flex justify-end'>
+                    <span className='text-[150px]  text-stone-400 font-bodoni italic absolute right-0 -translate-y-1/2'>{`0${
+                      index + 1
+                    }`}</span>
+                    <div
+                      style={{ backgroundImage: `url(${img})` }}
+                      className='h-[50vh] w-[50vh] rounded-xl'
+                    ></div>
                   </div>
-                  <div className='grid grid-cols-2 gap-5 pt-10'>
-                    <p>{p1}</p>
-                    <p>{p2}</p>
+                  <div className='flex flex-col gap-5'>
+                    <div>
+                      <h3 className='text-7xl uppercase font-thin'>{title}</h3>
+                    </div>
+                    <div className='grid grid-cols-2 gap-5'>
+                      <p>{p1}</p>
+                      <p>{p2}</p>
+                    </div>
+                    <a className='uppercase border w-fit px-5 py-3'>
+                      TALK TO US
+                    </a>
                   </div>
-                  <a className='uppercase border w-fit px-5 py-3'>TALK TO US</a>
                 </div>
               </div>
             ))}

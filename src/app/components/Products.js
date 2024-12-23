@@ -38,7 +38,6 @@ const Card = ({
     offset: ["start end", "start start"],
   })
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1])
   const scale = useTransform(progress, range, [1, targetScale])
 
   return (
@@ -54,8 +53,8 @@ const Card = ({
           top: `calc(5vh + ${i * 30}px)`,
         }}
       >
-        <div className='grid grid-cols-3 h-full shadow-lg'>
-          <div className='flex flex-col justify-between text-stone-900 bg-stone-100 shadow-lg rounded-l-lg h-full'>
+        <div className='grid grid-cols-3 h-full shadow-[0_0px_50px_-15px_#354340] rounded-xl'>
+          <div className='flex flex-col justify-between text-stone-900 bg-stone-100 rounded-l-xl h-full'>
             <h2 className='p-10 uppercase text-8xl'>{title}</h2>
             <div className='w-full px-10 py-3 bg-stone-900 rounded-bl-xl'>
               <a className='uppercase text-xl text-stone-200'>Explore</a>
@@ -83,6 +82,7 @@ export default function Products() {
   })
   return (
     <div
+      id='products'
       ref={containerRef}
       className={`w-screen relative rounded-t-3xl py-20`}
       style={{

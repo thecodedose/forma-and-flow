@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Link from "next/link"
 import Waves from "./Waves"
 import Clouds from "./Clouds"
 import Mountains from "./Mountains"
@@ -23,20 +24,20 @@ export default function Hero() {
           Forma & Flow
         </h4>
         <div className='flex justify-between pr-10 items-center text-lg text-stone-800 font-bold uppercase z-10'>
-          <a className='text-center cursor-pointer'>
+          <Link className='text-center cursor-pointer' href='#services'>
             <Underline text='Services'></Underline>
-          </a>
-          <a className='text-center cursor-pointer'>
+          </Link>
+          <Link className='text-center cursor-pointer' href="#products">
             <Underline text='Products'></Underline>
-          </a>
+          </Link>
           <a className='text-center cursor-pointer'>
             <Underline text='Contact'></Underline>
           </a>
         </div>
         <div
-          className='absolute top-0 w-screen h-[50vh]'
+          className='absolute top-0 w-screen h-[60vh]'
           style={{
-            background: "linear-gradient(#bff1ff, #eefffe, #ffe7ea, #c0cad6)",
+            background: "linear-gradient(#bff1ff, #eefffe, #ffe7ea, #c0cad6 80%)",
           }}
         >
           <div
