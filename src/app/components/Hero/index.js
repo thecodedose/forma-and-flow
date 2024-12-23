@@ -6,6 +6,7 @@ import Mountains from "./Mountains"
 import Sun from "./Sun"
 import Underline from "../Text/Underline"
 import Typing from "../Text/Typing"
+import Flip from "../Text/Flip"
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
           <Link className='text-center cursor-pointer' href='#services'>
             <Underline text='Services'></Underline>
           </Link>
-          <Link className='text-center cursor-pointer' href="#products">
+          <Link className='text-center cursor-pointer' href='#products'>
             <Underline text='Products'></Underline>
           </Link>
           <a className='text-center cursor-pointer'>
@@ -37,7 +38,8 @@ export default function Hero() {
         <div
           className='absolute top-0 w-screen h-[60vh]'
           style={{
-            background: "linear-gradient(#bff1ff, #eefffe, #ffe7ea, #c0cad6 80%)",
+            background:
+              "linear-gradient(#bff1ff, #eefffe, #ffe7ea, #c0cad6 80%)",
           }}
         >
           <div
@@ -76,8 +78,10 @@ export default function Hero() {
             structure and movement, shaping brands and experiences that endure'
             />
           </div>
-          <h4 className='uppercase font-bold text-[200px] leading-tight'>
-            Design
+          <h4 className='uppercase font-bold text-[200px] leading-tight flex'>
+            {"Design".split("").map((t, index) => (
+              <Flip key={index} text1={t} text2={t} lineHeight={"h-[200px]"} />
+            ))}
           </h4>
         </motion.div>
       </div>

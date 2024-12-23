@@ -56,14 +56,18 @@ const Card = ({
         <div className='grid grid-cols-3 h-full shadow-[0_0px_50px_-15px_#354340] rounded-xl'>
           <div className='flex flex-col justify-between text-stone-900 bg-stone-100 rounded-l-xl h-full'>
             <h2 className='p-10 uppercase text-8xl'>{title}</h2>
-            <div className='w-full px-10 py-3 bg-stone-900 rounded-bl-xl'>
-              <a className='uppercase text-xl text-stone-200'>Explore</a>
+            <div className='w-full px-10 py-5 bg-stone-900 rounded-bl-xl cursor-pointer'>
+              <a className='uppercase text-3xl text-stone-200'>Explore</a>
             </div>
           </div>
-          <div
-            style={{ backgroundImage: `url(${img})` }}
-            className='h-full'
-          ></div>
+          <div className='h-full w-full overflow-hidden'>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              style={{ backgroundImage: `url(${img})` }}
+              className='h-full'
+            ></motion.div>
+          </div>
           <div className='p-10 rounded-r-xl bg-stone-100 text-stone-900 uppercase font-bold'>
             <p>{description}</p>
           </div>

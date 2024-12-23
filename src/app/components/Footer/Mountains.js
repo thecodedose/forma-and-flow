@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 export default function Mountains() {
   return (
-    <div>
+    <div className='pointer-events-none'>
       <div className='flex w-full absolute bottom-[30vh] left-0'>
         <div
           className='bg-stone-500 bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply w-1/4 h-[40vh]'
