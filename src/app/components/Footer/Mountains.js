@@ -5,21 +5,21 @@ export default function Mountains() {
     <div className='pointer-events-none'>
       <div className='flex w-full absolute bottom-[30vh] left-0'>
         <div
-          className='bg-stone-500 bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply w-1/4 h-[40vh]'
+          className='bg-stone-500 bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply w-1/4 h-[30vh]'
           style={{
             clipPath: "polygon(100% 0%, 100% 100%, 0% 100%)",
           }}
         ></div>
         <div
-          className='bg-gradient-to-br from-stone-800 to-stone-500 w-1/4 h-[40vh]'
+          className='bg-gradient-to-br from-stone-800 to-stone-500 w-1/4 h-[30vh]'
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%)" }}
         ></div>
         <div
-          className='bg-[#7e9494] w-1/4 h-[40vh] bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply'
+          className='bg-[#7e9494] w-1/4 h-[30vh] bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply'
           style={{ clipPath: "polygon(100% 0%, 100% 100%, 0% 100%)" }}
         ></div>
         <div
-          className='bg-repeat-round bg-blend-multiply to-[#7e9494] w-1/4 h-[40vh]'
+          className='bg-repeat-round bg-blend-multiply to-[#7e9494] w-1/4 h-[30vh]'
           style={{
             clipPath: "polygon(0% 0%, 100% 100%, 0% 100%)",
             background: "url('/noise.png'), linear-gradient(#3d4c52, #7e9494)",
@@ -55,11 +55,11 @@ export default function Mountains() {
       </motion.div>
       <div className='flex w-fit absolute bottom-[10vh] left-0'>
         <div
-          className='bg-[#dbceb8] w-[30vw] h-[40vh] bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply'
+          className='bg-[#dbceb8] w-[30vw] h-[30vh] bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply'
           style={{ clipPath: "polygon(100% 0%, 100% 100%, 0% 100%)" }}
         ></div>
         <div
-          className='bg-gradient-to-br from-stone-400 to-stone-200 w-[30vw] h-[40vh]'
+          className='bg-gradient-to-br from-stone-400 to-stone-200 w-[30vw] h-[30vh]'
           style={{
             clipPath: "polygon(0% 0%, 100% 100%, 0% 100%)",
             background: "url('/noise.png'), linear-gradient(#bdb19b, #dbceb8)",
@@ -69,11 +69,11 @@ export default function Mountains() {
       </div>
       <div className='flex w-fit absolute bottom-[10vh] right-0'>
         <div
-          className='bg-[#efe9db] w-[30vw] h-[40vh] bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply'
+          className='bg-[#efe9db] w-[30vw] h-[30vh] bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply'
           style={{ clipPath: "polygon(100% 0%, 100% 100%, 0% 100%)" }}
         ></div>
         <div
-          className='bg-gradient-to-b from-stone-400 to-stone-300 w-[30vw] h-[40vh]'
+          className='bg-gradient-to-b from-stone-400 to-stone-300 w-[30vw] h-[30vh]'
           style={{
             clipPath: "polygon(0% 0%, 100% 100%, 0% 100%)",
             background: "url('/noise.png'), linear-gradient(#b8ab91, #efe9db)",
@@ -94,11 +94,11 @@ export default function Mountains() {
         className='flex w-fit absolute bottom-0 left-0'
       >
         <div
-          className='bg-[#808277] w-[40vw] h-[40vh] bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply'
+          className='bg-[#808277] w-[40vw] h-[30vh] bg-[url("/noise.png")] bg-repeat-round bg-blend-multiply'
           style={{ clipPath: "polygon(100% 0%, 100% 100%, 0% 100%)" }}
         ></div>
         <div
-          className='w-[40vw] h-[40vh] bg-blend-multiply'
+          className='w-[40vw] h-[30vh] bg-blend-multiply'
           style={{
             clipPath: "polygon(0% 0%, 100% 100%, 0% 100%)",
             background: "url('/noise.png'), linear-gradient(#444843, #808277)",

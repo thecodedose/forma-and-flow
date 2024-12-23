@@ -15,7 +15,7 @@ export default function Tagline() {
   return (
     <div
       ref={containerRef}
-      className='w-screen h-[300vh] bg-gradient-to-b from-[#385f70] via-[#1f2d57] to-[#000b1e] relative py-[25vh]'
+      className='w-screen h-[200vh] lg:h-[300vh] bg-gradient-to-b from-[#385f70] via-[#1f2d57] to-[#000b1e] relative lg:py-[25vh]'
     >
       <div
         width={100}
@@ -26,7 +26,7 @@ export default function Tagline() {
       <div className='w-screen h-screen sticky top-0 flex justify-center items-center'>
         <motion.h2
           style={{ scale: scale }}
-          className='text-8xl text-stone-200 flex flex-col absolute'
+          className='text-5xl lg:text-8xl text-stone-200 flex flex-col absolute'
         >
           {["Shaping", "design,", "building", "experiences"].map(
             (word, index) => {
@@ -35,7 +35,7 @@ export default function Tagline() {
                   key={index}
                   text1={word}
                   text2={word}
-                  lineHeight={"h-[6rem]"}
+                  lineHeight={"h-[2.5rem] lg:h-[6rem]"}
                 />
               )
             }

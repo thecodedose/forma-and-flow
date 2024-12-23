@@ -50,7 +50,7 @@ export default function Sun() {
       animate={{ y: "-50%" }}
       transition={{ type: "spring", ease: "easeOut" }}
       ref={sunElementRef}
-      className='w-52 h-52 overflow-hidden rounded-full absolute top-[30vh] left-1/2'
+      className='h-32 w-32 lg:w-52 lg:h-52 overflow-hidden rounded-full absolute top-[30vh] left-1/2'
       style={{ background: "radial-gradient(circle, #ff87a0, #fff2bb)" }}
     >
       <div

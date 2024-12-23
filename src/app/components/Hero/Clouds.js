@@ -12,7 +12,7 @@ export default function Clouds() {
           repeatType: "reverse",
           duration: 1,
         }}
-        className='w-60 h-16 bg-white rounded-full absolute top-[30vh] left-1/3'
+        className='w-32 h-6 lg:w-60 lg:h-16 bg-white rounded-full absolute top-[30vh] left-1/4 lg:left-1/3'
       ></motion.div>
       <motion.div
         initial={{ transform: "translate(-40px, -80px)" }}
@@ -23,7 +23,7 @@ export default function Clouds() {
           repeatType: "reverse",
           duration: 2,
         }}
-        className='w-56 h-8 bg-white rounded-full absolute top-[30vh] left-1/3'
+        className='w-24 h-4 lg:w-56 lg:h-8 bg-white rounded-full absolute top-[32vh] lg:top-[30vh] left-1/3'
       ></motion.div>
       <motion.div
         initial={{ transform: "translate(0, -100%)" }}
@@ -34,7 +34,7 @@ export default function Clouds() {
           repeatType: "reverse",
           duration: 2,
         }}
-        className='w-60 h-10 bg-white rounded-full absolute top-[30vh] left-1/2 -translate-y-full'
+        className='w-32 h-6 lg:w-60 lg:h-10 bg-white rounded-full absolute top-[30vh] left-1/2 -translate-y-full'
       ></motion.div>
     </motion.div>
   )

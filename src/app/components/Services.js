@@ -51,9 +51,9 @@ export default function Services() {
         className='absolute w-full h-[400vh] bg-[url("/noise.png")] bg-repeat-round opacity-20'
       ></div>
       <div className='sticky top-0'>
-        <div className='px-20 py-10'>
-          <h4 className='uppercase text-8xl font-bold'>Services</h4>
-          <p className='w-1/2'>
+        <div className='px-5 lg:px-20 py-5 lg:py-10'>
+          <h4 className='uppercase text-4xl lg:text-8xl font-bold'>Services</h4>
+          <p className='lg:w-1/2'>
             Forma & Flow was born out of the belief that great design is a
             delicate dance between structure and creativity. We build digital
             experiences that are not just visually stunning but also intuitive
@@ -61,37 +61,36 @@ export default function Services() {
             designs that tell your story effortlessly.
           </p>
         </div>
-
         <div className='w-screen overflow-hidden'>
           <motion.div
             style={{ x }}
-            className='w-[300vw] h-screen flex gap-20 px-20 sticky top-1/3'
+            className='w-[300vw] h-screen flex gap-5 lg:gap-20 px-5 lg:px-20 sticky top-1/4 lg:top-1/3'
           >
             {SERVICES.map(({ title, link, p1, p2, img }, index) => (
               <div key={index} className='w-screen h-fit flex justify-center'>
                 <div
-                  className='w-[70vw] bg-blend-overlay rounded-3xl h-[65vh] grid grid-cols-[1fr,2fr] items-center p-20 gap-20'
+                  className='w-[90vw] lg:w-[70vw] bg-blend-overlay rounded-3xl h-fit grid lg:grid-cols-[1fr,2fr] items-center p-5 lg:p-20 gap-5 lg:gap-20'
                   style={{
                     background:
                       "url('/noise.png'), linear-gradient(45deg, #000b1e, #c0baa4)",
                   }}
                 >
                   <div className='w-full relative flex justify-end'>
-                    <span className='text-[150px]  text-stone-400 font-bodoni italic absolute right-0 -translate-y-1/2'>{`0${
+                    <span className='lg:text-[150px]  text-stone-400 font-bodoni italic absolute right-0 -translate-y-1/2'>{`0${
                       index + 1
                     }`}</span>
                     <div
                       style={{ backgroundImage: `url(${img})` }}
-                      className='h-[50vh] w-[50vh] rounded-xl'
+                      className='w-full h-[25vh] lg:h-[50vh] lg:w-[50vh] rounded-xl'
                     ></div>
                   </div>
-                  <div className='flex flex-col gap-5'>
+                  <div className='flex flex-col gap-3 lg:gap-5'>
                     <div>
-                      <h3 className='text-7xl uppercase font-thin'>{title}</h3>
+                      <h3 className='text-4xl lg:text-7xl uppercase font-thin'>{title}</h3>
                     </div>
-                    <div className='grid grid-cols-2 gap-5'>
+                    <div className='lg:grid grid-cols-2 gap-5'>
                       <p>{p1}</p>
-                      <p>{p2}</p>
+                      <p className='hidden lg:block'>{p2}</p>
                     </div>
                     <a className='uppercase border w-fit px-5 py-3'>
                       TALK TO US

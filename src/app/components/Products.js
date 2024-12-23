@@ -46,21 +46,20 @@ const Card = ({
       className='w-screen h-screen flex justify-center items-center sticky top-0'
     >
       <motion.div
-        className='relative h-2/3 w-full rounded-xl'
+        className='relative h-2/3 w-full rounded-xl px-5'
         style={{
-          backgroundColor: "white",
           scale,
           top: `calc(5vh + ${i * 30}px)`,
         }}
       >
-        <div className='grid grid-cols-3 h-full shadow-[0_0px_50px_-15px_#354340] rounded-xl'>
-          <div className='flex flex-col justify-between text-stone-900 bg-stone-100 rounded-l-xl h-full'>
-            <h2 className='p-10 uppercase text-8xl'>{title}</h2>
-            <div className='w-full px-10 py-5 bg-stone-900 rounded-bl-xl cursor-pointer'>
+        <div className='-translate-y-20 lg:translate-y-0 lg:grid grid-cols-3 lg:h-full shadow-[0_0px_50px_-15px_#354340] rounded-xl'>
+          <div className='flex flex-col justify-between text-stone-900 bg-stone-100 rounded-t-xl lg:rounded-l-xl h-full'>
+            <h2 className='p-10 uppercase text-3xl lg:text-8xl'>{title}</h2>
+            <div className='w-full px-10 py-5 bg-stone-900 lg:rounded-bl-xl cursor-pointer'>
               <a className='uppercase text-3xl text-stone-200'>Explore</a>
             </div>
           </div>
-          <div className='h-full w-full overflow-hidden'>
+          <div className='h-64 lg:h-full w-full overflow-hidden'>
             <motion.div
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -68,7 +67,7 @@ const Card = ({
               className='h-full'
             ></motion.div>
           </div>
-          <div className='p-10 rounded-r-xl bg-stone-100 text-stone-900 uppercase font-bold'>
+          <div className='p-10 rounded-b-xl lg:rounded-r-xl bg-stone-100 text-stone-900 uppercase font-bold'>
             <p>{description}</p>
           </div>
         </div>
@@ -88,7 +87,7 @@ export default function Products() {
     <div
       id='products'
       ref={containerRef}
-      className={`w-screen relative rounded-t-3xl py-20`}
+      className={`w-screen relative rounded-t-3xl py-10 lg:py-20`}
       style={{
         background: "url('/noise.png'), linear-gradient(#f5f5f4, #9fb1ad)",
         backgroundRepeat: "round",
@@ -99,7 +98,7 @@ export default function Products() {
         {"Products".split("").map((char, index) => (
           <div
             key={index}
-            className='text-[150px] text-stone-800 font-bold flex flex-col uppercase overflow-hidden'
+            className='text-5xl lg:text-[150px] text-stone-800 font-bold flex flex-col uppercase overflow-hidden'
           >
             <motion.span
               key={index}

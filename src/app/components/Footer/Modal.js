@@ -9,13 +9,10 @@ const TallyModal = ({ isOpen, onClose }) => {
       onRequestClose={onClose}
       contentLabel='Tally Form'
       className={
-        "rounded-xl outline-none bg-[url('/noise.png')] bg-stone-100 self-center p-10 shadow-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-fit flex flex-col items-end w-1/2"
+        "rounded-xl outline-none bg-[url('/noise.png')] bg-stone-100 self-center p-5 lg:p-10 shadow-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-fit flex flex-col items-end w-[80vw] lg:w-1/2"
       }
     >
-      <button
-        onClick={onClose}
-        className='self-right'
-      >
+      <button onClick={onClose} className='self-right'>
         ✖️
       </button>
       <iframe
