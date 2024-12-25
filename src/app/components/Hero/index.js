@@ -21,15 +21,28 @@ export default function Hero() {
           Forma & Flow
         </h4>
         <div className='flex gap-5 justify-between items-center lg:text-lg text-stone-800 font-bold uppercase z-10'>
-          <Link className='text-center cursor-pointer' href='#services'>
-            <Underline text='Services'></Underline>
-          </Link>
-          <Link className='text-center cursor-pointer' href='#products'>
-            <Underline text='Products'></Underline>
-          </Link>
-          <a className='text-center cursor-pointer'>
-            <Underline text='Contact'></Underline>
-          </a>
+          <Underline
+            text={
+              <Link className='text-center cursor-pointer' href='#services'>
+                Services
+              </Link>
+            }
+          ></Underline>
+
+          <Underline
+            text={
+              <Link className='text-center cursor-pointer' href='#products'>
+                Products
+              </Link>
+            }
+          ></Underline>
+          <Underline
+            text={
+              <Link className='text-center cursor-pointer' href='#products'>
+                Contact
+              </Link>
+            }
+          ></Underline>
         </div>
         <div
           className='absolute top-0 w-screen h-[60vh]'

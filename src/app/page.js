@@ -1,12 +1,12 @@
 "use client"
 import { useRef, useEffect } from "react"
-import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Products from "./components/Products"
 import Services from "./components/Services"
 import Tagline from "./components/Tagline"
 import Lenis from "@studio-freight/lenis"
 import Footer from "./components/Footer"
+import CustomCursor from "./components/CustomCursor"
 
 export default function Home() {
   const lenisRef = useRef(null)
@@ -32,14 +32,17 @@ export default function Home() {
   }, [])
 
   return (
-    <div ref={lenisRef}>
-      <div>
-        <Hero />
-        <Tagline />
+    <>
+      <div ref={lenisRef}>
+        <div>
+          <Hero />
+          <Tagline />
+        </div>
+        <Services />
+        <Products />
+        <Footer />
       </div>
-      <Services />
-      <Products />
-      <Footer />
-    </div>
+      <CustomCursor />
+    </>
   )
 }
