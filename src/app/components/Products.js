@@ -53,7 +53,7 @@ const Card = ({
         }}
       >
         <div className='-translate-y-20 lg:translate-y-0 lg:grid grid-cols-3 lg:h-full shadow-[0_0px_50px_-15px_#354340] rounded-xl'>
-          <div className='flex flex-col justify-between text-stone-900 bg-stone-100 rounded-t-xl lg:rounded-l-xl h-full'>
+          <div className='flex flex-col justify-between text-stone-900 bg-stone-100 rounded-t-xl lg:rounded-tr-none lg:rounded-l-xl h-full'>
             <h2 className='p-10 uppercase text-3xl lg:text-8xl'>{title}</h2>
             <div className='w-full px-10 py-5 bg-stone-900 lg:rounded-bl-xl cursor-pointer'>
               <a className='uppercase text-3xl text-stone-200'>Explore</a>
