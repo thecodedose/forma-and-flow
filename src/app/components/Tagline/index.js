@@ -26,7 +26,7 @@ export default function Tagline() {
       <div className='w-screen h-screen sticky top-0 flex justify-center items-center'>
         <motion.h2
           style={{ scale: scale }}
-          className='text-5xl lg:text-8xl text-stone-200 flex flex-col absolute'
+          className='text-4xl lg:text-8xl text-stone-200 flex flex-col absolute'
         >
           {["Shaping", "design,", "building", "experiences"].map(
             (word, index) => {

@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Underline from "./Text/Underline"
 
 const SERVICES = [
   {
@@ -67,16 +68,19 @@ export default function Services() {
             className='w-[300vw] h-screen flex gap-5 lg:gap-20 px-5 lg:px-20 sticky top-1/4 lg:top-1/3'
           >
             {SERVICES.map(({ title, link, p1, p2, img }, index) => (
-              <div key={index} className='w-screen h-fit flex justify-center'>
+              <div
+                key={index}
+                className='w-screen h-[70vh] md:h-fit flex justify-center'
+              >
                 <div
-                  className='w-[90vw] lg:w-[70vw] bg-blend-overlay rounded-3xl h-fit grid lg:grid-cols-[1fr,2fr] items-center p-5 lg:p-20 gap-5 lg:gap-20'
+                  className='w-[90vw] lg:w-[70vw] bg-blend-overlay rounded-3xl grid lg:grid-cols-[1fr,2fr] items-center p-5 lg:p-10 gap-5 lg:gap-20'
                   style={{
                     background:
                       "url('/noise.png'), linear-gradient(45deg, #000b1e, #c0baa4)",
                   }}
                 >
                   <div className='w-full relative flex justify-end'>
-                    <span className='lg:text-[150px]  text-stone-400 font-bodoni italic absolute right-0 -translate-y-1/2'>{`0${
+                    <span className='lg:text-5xl text-stone-400 font-bodoni italic absolute left-10 -translate-y-1/2'>{`0${
                       index + 1
                     }`}</span>
                     <div
@@ -86,15 +90,19 @@ export default function Services() {
                   </div>
                   <div className='flex flex-col gap-3 lg:gap-5'>
                     <div>
-                      <h3 className='text-4xl lg:text-7xl uppercase font-thin'>{title}</h3>
+                      <h3 className='text-4xl lg:text-7xl uppercase font-thin'>
+                        {title}
+                      </h3>
                     </div>
                     <div className='lg:grid grid-cols-2 gap-5'>
                       <p>{p1}</p>
                       <p className='hidden lg:block'>{p2}</p>
                     </div>
-                    <a className='uppercase border w-fit px-5 py-3'>
-                      TALK TO US
-                    </a>
+                    <Underline
+                      text={<a className='uppercase text-xl'>TALK TO US</a>}
+                      underlineClass={"bg-stone-100"}
+                      start='left'
+                    ></Underline>
                   </div>
                 </div>
               </div>
