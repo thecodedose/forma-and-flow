@@ -94,16 +94,16 @@ export default function Products() {
       ref={containerRef}
       className={`w-screen relative rounded-t-3xl py-10 lg:py-20`}
       style={{
-        background: "url('/noise.png'), linear-gradient(#f5f5f4, #9fb1ad)",
+        background: "url('/noise.png'), linear-gradient(#000b1e, #f5f5f4, #9fb1ad)",
         backgroundRepeat: "round",
         backgroundBlendMode: "multiply",
       }}
     >
-      <div className='flex h-screen justify-center sticky top-0'>
+      <div className='flex justify-center sticky top-0'>
         {"Products".split("").map((char, index) => (
           <div
             key={index}
-            className='text-5xl lg:text-[150px] text-stone-800 font-bold flex flex-col uppercase overflow-hidden'
+            className='text-5xl lg:text-[150px] text-white font-bold flex flex-col uppercase overflow-hidden'
           >
             <motion.span
               key={index}

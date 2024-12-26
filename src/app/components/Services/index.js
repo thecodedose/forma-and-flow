@@ -1,7 +1,7 @@
 import { useRef } from "react"
-import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
-import Underline from "./Text/Underline"
+import Underline from "../Text/Underline"
+import SolarSystem from "./SolarSystem"
 
 const SERVICES = [
   {
@@ -42,7 +42,7 @@ export default function Services() {
 
   return (
     <div
-      className='bg-[#000b1e]  w-screen h-[400vh]'
+      className='bg-[#000b1e]  w-screen h-[400vh] relative'
       ref={containerRef}
       id='services'
     >
@@ -51,7 +51,9 @@ export default function Services() {
         height={100}
         className='absolute w-full h-[400vh] bg-[url("/noise.png")] bg-repeat-round opacity-20'
       ></div>
+
       <div className='sticky top-0'>
+        <SolarSystem></SolarSystem>
         <div className='px-5 lg:px-20 py-5 lg:py-10'>
           <h4 className='uppercase text-4xl lg:text-8xl font-bold'>Services</h4>
           <p className='lg:w-1/2'>
@@ -72,14 +74,8 @@ export default function Services() {
                 key={index}
                 className='w-screen h-[70vh] md:h-fit flex justify-center'
               >
-                <div
-                  className='w-[90vw] lg:w-[70vw] bg-blend-overlay rounded-3xl grid lg:grid-cols-[1fr,2fr] items-center p-5 lg:p-10 gap-5 lg:gap-20'
-                  style={{
-                    background:
-                      "url('/noise.png'), linear-gradient(45deg, #000b1e, #c0baa4)",
-                  }}
-                >
-                  <div className='w-full relative flex justify-end'>
+                <div className='w-[90vw] lg:w-[70vw] bg-[#111d32] relative bg-blend-overlay rounded-3xl grid lg:grid-cols-[1fr,2fr] items-center p-5 lg:p-10 gap-5 lg:gap-20'>
+                  <div className='w-full relative flex justify-end z-10'>
                     <span className='lg:text-5xl text-stone-400 font-bodoni italic absolute left-10 -translate-y-1/2'>{`0${
                       index + 1
                     }`}</span>
