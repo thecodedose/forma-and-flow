@@ -74,7 +74,7 @@ export default function Services() {
                 key={index}
                 className='w-screen h-[70vh] md:h-fit flex justify-center'
               >
-                <div className='w-[90vw] lg:w-[70vw] bg-[#111d32] relative bg-blend-overlay rounded-3xl grid lg:grid-cols-[1fr,2fr] items-center p-5 lg:p-10 gap-5 lg:gap-20'>
+                <div className='w-[90vw] lg:w-[70vw] bg-[#111d32] bg-[url("/noise.png")] relative bg-blend-overlay rounded-3xl grid lg:grid-cols-[1fr,2fr] items-center p-5 lg:p-10 gap-5 lg:gap-20'>
                   <div className='w-full relative flex justify-end z-10'>
                     <span className='lg:text-5xl text-stone-400 font-bodoni italic absolute left-10 -translate-y-1/2'>{`0${
                       index + 1
@@ -86,16 +86,16 @@ export default function Services() {
                   </div>
                   <div className='flex flex-col gap-3 lg:gap-5'>
                     <div>
-                      <h3 className='text-4xl lg:text-7xl uppercase font-thin'>
+                      <h3 className='text-4xl lg:text-7xl uppercase font-bold'>
                         {title}
                       </h3>
                     </div>
-                    <div className='lg:grid grid-cols-2 gap-5'>
+                    <div className='lg:grid grid-cols-2 gap-5 font-thin'>
                       <p>{p1}</p>
                       <p className='hidden lg:block'>{p2}</p>
                     </div>
                     <Underline
-                      text={<a className='uppercase text-xl'>TALK TO US</a>}
+                      text={<a className='uppercase text-xl font-bold'>TALK TO US</a>}
                       underlineClass={"bg-stone-100"}
                       start='left'
                     ></Underline>
