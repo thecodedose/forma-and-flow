@@ -95,7 +95,7 @@ export default function Services() {
                       <p className='hidden lg:block'>{p2}</p>
                     </div>
                     <Underline
-                      text={<a className='uppercase text-xl font-bold'>TALK TO US</a>}
+                      text={<a href={link} className='uppercase text-xl font-bold'>TALK TO US</a>}
                       underlineClass={"bg-stone-100"}
                       start='left'
                     ></Underline>
