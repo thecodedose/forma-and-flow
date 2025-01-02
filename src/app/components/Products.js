@@ -3,22 +3,25 @@ import { motion, useScroll, useTransform } from "framer-motion"
 
 const projects = [
   {
-    title: "Portfolio Template",
+    title: "Bentofolio Portfolio Template",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet ex eget urna tincidunt viverra. Nullam fringilla, libero eget venenatis vehicula, urna nunc gravida orci, a pharetra libero erat vel risus. Vivamus euismod tincidunt nibh, ac sodales urna venenatis a. Suspendisse potenti.",
+    img: "/bentofolio.png",
+    purchaseUrl: "https://tally.so/r/mBAaPY",
+  },
+  {
+    title: "Gastby Starter Peach Blog Template",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet ex eget urna tincidunt viverra. Nullam fringilla, libero eget venenatis vehicula, urna nunc gravida orci, a pharetra libero erat vel risus. Vivamus euismod tincidunt nibh, ac sodales urna venenatis a. Suspendisse potenti.",
     img: "https://thecodedose.com/assets/confident-ritchie-123a6d.netlify_2.png",
+    purchaseUrl: "https://tally.so/r/mBAaPY",
   },
   {
     title: "Portfolio Template",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet ex eget urna tincidunt viverra. Nullam fringilla, libero eget venenatis vehicula, urna nunc gravida orci, a pharetra libero erat vel risus. Vivamus euismod tincidunt nibh, ac sodales urna venenatis a. Suspendisse potenti.",
     img: "https://thecodedose.com/assets/confident-ritchie-123a6d.netlify_2.png",
-  },
-  {
-    title: "Portfolio Template",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet ex eget urna tincidunt viverra. Nullam fringilla, libero eget venenatis vehicula, urna nunc gravida orci, a pharetra libero erat vel risus. Vivamus euismod tincidunt nibh, ac sodales urna venenatis a. Suspendisse potenti.",
-    img: "https://thecodedose.com/assets/confident-ritchie-123a6d.netlify_2.png",
+    purchaseUrl: "https://tally.so/r/mBAaPY",
   },
 ]
 
@@ -29,6 +32,7 @@ const Card = ({
   img,
   url,
   color,
+  purchaseUrl,
   progress,
   range,
   targetScale,
@@ -63,15 +67,21 @@ const Card = ({
             <motion.div
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              style={{ backgroundImage: `url(${img})` }}
+              style={{
+                backgroundImage: `url(${img})`,
+                backgroundSize: "cover",
+              }}
               className='h-full'
             ></motion.div>
           </div>
           <div className='flex flex-col justify-between rounded-b-xl lg:rounded-r-xl bg-stone-100 text-stone-900 uppercase font-bold'>
             <p className='p-10'>{description}</p>
             <div className='w-full px-10 py-5 bg-stone-900 rounded-bl-xl lg:rounded-bl-none rounded-br-xl cursor-pointer relative'>
-              <a className='uppercase text-3xl text-stone-200 z-30 pointer-events-auto'>
-                Explore
+              <a
+                href={purchaseUrl}
+                className='uppercase text-3xl text-stone-200 z-30 pointer-events-auto'
+              >
+                BUY NOW
               </a>
             </div>
           </div>
@@ -94,7 +104,8 @@ export default function Products() {
       ref={containerRef}
       className={`w-screen relative rounded-t-3xl py-10 lg:py-20`}
       style={{
-        background: "url('/noise.png'), linear-gradient(#000b1e, #f5f5f4, #9fb1ad)",
+        background:
+          "url('/noise.png'), linear-gradient(#000b1e, #f5f5f4, #9fb1ad)",
         backgroundRepeat: "round",
         backgroundBlendMode: "multiply",
       }}
